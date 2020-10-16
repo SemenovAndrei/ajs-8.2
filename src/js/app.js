@@ -1,11 +1,11 @@
-import Team from './team';
-import charactersList from './characters/characterslist';
+/* eslint-disable guard-for-in */
+/* eslint-disable no-restricted-syntax */
+import ErrorRepository from './errorrepsitory';
+import errorsList from './errorslist';
 
-const team = new Team();
+const repository = new ErrorRepository(Object.entries(errorsList));
 
-console.log(team);
+console.log(repository);
 
-team.addAll(charactersList);
-
-console.log(team);
-console.log(team.toArray());
+console.log(repository.translate(1));
+console.log(repository.translate(111));
