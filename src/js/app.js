@@ -8,4 +8,5 @@ const repository = new ErrorRepository(Object.entries(errorsList));
 console.log(repository);
 
 console.log(repository.translate(1));
+console.log(repository.translate());
 console.log(repository.translate(111));
